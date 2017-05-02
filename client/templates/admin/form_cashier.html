@@ -4,7 +4,7 @@
         <a href="javascript:;" ui-sref="admin.dashboard">Dashboard</a><i class="fa fa-circle"></i>
     </li>
     <li class="active">
-        <a href="javascript:;" ui-sref="admin.agent">Cashier List</a><i class="fa fa-circle"></i>
+        <a href="javascript:;" ui-sref="admin.cashier">Cashier List</a><i class="fa fa-circle"></i>
     </li>
     <li class="active">
         Cashier {{form_action}}
@@ -53,11 +53,10 @@
                             <div class="form-group">
                                 <label class="control-label col-md-3" for="iAgentId">Agent <span class="text-danger">*</span></label>
                                 <div class="col-md-4">
-                                    <select class="form-control" name="iAgentId" id="iAgentId" required ng-model="user.iAgentId">
-                                        <option>Select Agent</option>
-                                        <option ng-repeat="a in agent" value="a.iUserId">{{a.vFullName}}</option>
+
+                                    <select class="form-control" name="iAgentId" id="iAgentId" required ng-model="user.iAgentId" ng-options="a.iUserId as a.vFullName for a in agent">
+                                        <option value=""> Select Agent </option>
                                     </select>
-                                    <!--<input type="email" value="" class="form-control" name="iAgentId" id="iAgentId"  required ng-model="user.vEmail">-->
                                     <div ng-show="form_user.iAgentId.$error && form_user.iAgentId.$dirty" role="alert" class="text-danger">
                                         <div ng-message="required" ng-show="form_user.iAgentId.$dirty && form_user.iAgentId.$error.required">Agent is required.</div>
                                     </div>

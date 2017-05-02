@@ -284,6 +284,12 @@ var Users = {
     },
     get_all_agent:function(cb){
         db.query("SELECT * FROM tbl_users WHERE vUserType = 'agent' AND eStatus = 'y' ",cb);
+    },
+    add_tbl_cashiers:function(body,cb){
+        db.query("INSERT INTO tbl_cashiers (iUserId,iAgentId) VALUES (?,?)",[body.iUserId,body.iAgentId],cb);
+    },
+    update_tbl_cashiers:function(body,cb){
+        db.query("UPDATE tbl_cashiers SET iAgentId = ? WHERE iUserId = ?",[body.iAgentId,body.iUserId],cb);
     }
 };
 module.exports = Users;

@@ -787,6 +787,122 @@ module.exports = function (app,cli,mail) {
             });
         });
     });
+
+    app.post('/add_cashier',passport.authenticate('jwt',{session:false}),function (req,res) {
+        if(req.user.length > 0){
+            req.checkBody('vFullName',"Please Enter Full Name").notEmpty();
+            req.checkBody('vEmail','Please Enter Email Address').notEmpty();
+            req.checkBody('vEmail','Please Enter Proper Email').isEmail();
+            req.checkBody('iAgentId','Please Select Agent').notEmpty();
+            req.getValidationResult().then(function(result){
+                if(!result.isEmpty()){
+                    res.json({
+                        "status": 404,
+                        "message": "Please fill all required value",
+                        "Data":result.mapped()
+                    });
+                }else{
+                    checkUser(req.body.vEmail,function(errOne,isActive){
+                        if(errOne) throw errOne;
+                        if(isActive.length > 0) {
+                            res.json({
+                                "status":404,
+                                "message":"User already available"
+                            });
+                        }else{
+                            var vPassword = randomstring.generate(6);
+                            queries.addUser({"vUserType":"cashier","vFullName":req.body.vFullName,"vUserName":req.body.vEmail,"vEmail":req.body.vEmail,"vPassword":vPassword},function(errTwo,resTwo){
+                                if(errTwo) throw errTwo;
+                                queries.add_tbl_cashiers({iUserId:resTwo.insertId,iAgentId:req.body.iAgentId},function(errThree,resThree){
+                                    if(errThree) throw errThree;
+                                    if(resThree.insertId > 0) {
+                                        //Send Mail
+                                        var mailOptions = {
+                                            from: '"Bet50" <info@Bet50.com>', // sender address
+                                            to: req.body.vEmail, // list of receivers
+                                            subject: 'Hello '+ req.body.vFullName, // Subject line
+                                            text: 'One time password  : ' + vPassword // plaintext body
+                                        };
+                                        mail.sendMail(mailOptions,function(err,info){
+                                            if(err){
+                                                cli.red("Mail not send");
+                                                console.log(err);
+                                            }else{
+                                                cli.yellow("Mail send");
+                                            }
+                                        });
+                                        //Send mail end
+                                        res.json({
+                                            "status":200,
+                                            "message":"User Insert Successfully."
+                                        });
+                                    }else{
+                                        res.json({
+                                            "status":400,
+                                            "message":"Something went wrong"
+                                        });
+                                    }
+                                });
+                            });
+                        }
+                    });
+                }
+            });
+
+
+        }else{
+            res.status(401).json({
+                'status':401,
+                'message':'User does not exists'
+            })
+        }
+    });
+
+    app.post('/update_cashier',passport.authenticate('jwt',{session:false}),function (req,res) {
+        if(req.user.length > 0){
+            req.checkBody('vFullName',"Please Enter Full Name").notEmpty();
+            req.checkBody('iUserId',"Please Enter User Details").notEmpty();
+            req.checkBody('iAgentId','Please Select Agent').notEmpty();
+            req.getValidationResult().then(function(result){
+                if(!result.isEmpty()){
+                    res.json({
+                        "status": 404,
+                        "message": "Please fill all required value",
+                        "Data":result.mapped()
+                    });
+                }else{
+                    checkUser(req.body.vEmail,function(errOne,isActive){
+                        if(errOne) throw errOne;
+                        if(isActive.length > 0) {
+                            res.json({
+                                "status":404,
+                                "message":"User already available"
+                            });
+                        }else{
+                            queries.updateUserById({vFullName:req.body.vFullName,id:req.body.iUserId},function(errOne,resOne){
+                                if(errOne) throw errOne;
+                                queries.update_tbl_cashiers({iAgentId:req.body.iAgentId,iUserId:req.body.iUserId},function(errTwo,resTwo){
+                                    if(errTwo) throw errTwo;
+                                    res.status(200).json({
+                                       'status':'200',
+                                        'message':'Record updated successfully.'
+                                    });
+                                });
+                            });
+                        }
+                    });
+                }
+            });
+
+
+        }else{
+            res.status(401).json({
+                'status':401,
+                'message':'User does not exists'
+            })
+        }
+    });
+
     //Cashier Module End
 }
 

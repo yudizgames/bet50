@@ -29,7 +29,60 @@ angular.module('main').controller('CashierFormCtrl',function ($scope,$rootScope,
             });
         }else{
 
+            $http({
+                method:'post',
+                url:'/getagent',
+                dataType:'json'
+            }).then(function(res){
+                console.log(res);
+                if(res.data.status ==200){
+                    $scope.agent = res.data.agent;
+                }
+            },function(err){
+                console.log(err);
+            });
         }
+    }
+
+
+    $scope.submitUser = function(){
+        let postData = {};
+        var URL = "";
+        if($scope.user.iUserId != null || $scope.user.iUserId != undefined){
+            postData = {
+                iUserId: $scope.user.iUserId,
+                vFullName:$scope.user.vFullName,
+                iAgentId:$scope.user.iAgentId
+            }
+            URL = "/update_cashier";
+
+        }else{
+            postData = {
+                    iUserId:0,
+                    vFullName:$scope.user.vFullName,
+                    iAgentId:$scope.user.iAgentId,
+                    vEmail:$scope.user.vEmail
+            }
+            URL = "/add_cashier";
+        }
+        $http({
+            method:'post',
+            url:URL,
+            dataType:'json',
+            data:postData
+        }).then(function(res){
+            if(res.data.status == 200){
+                toastr.success(res.data.message,"Success");
+                $state.go("admin.cashier");
+            }else{
+                toastr.error(res.data.message,"Error");
+            }
+            console.log(res);
+        },function(err){
+            toastr.error(res.data.message,"Error");
+            console.log(err);
+        });
+        console.log(postData);
     }
 
 });
