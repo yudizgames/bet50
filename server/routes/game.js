@@ -18,7 +18,13 @@ function checkUser(vEmail,cb){
 passport.use(JWTStrategy);
 
 module.exports = function (app,cli) {
-
+    app.get('/p', function (req, res) {
+        console.log(req.query.tagId)
+        console.log("call");
+        res.json({
+            data:req.query.tagId
+        })
+    });
 
     app.post('/ws/v1/login',function(req,res){
         cli.blue("logincall");

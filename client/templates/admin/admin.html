@@ -86,14 +86,14 @@
                   <i class="fa fa-users" aria-hidden="true"></i>
                   Cashier Management</a>
             </li>
-            <li>
-               <a href="javascrip:;">
-                  <i class="icon-settings"></i>
+            <li ng-class="currentState == 'admin.credit' ? 'active': ''">
+               <a href="#/admin/credit">
+                  <i class="fa fa-money" aria-hidden="true"></i>
                   Credit Management</a>
             </li>
-            <li>
-               <a href="javascrip:;">
-                  <i class="icon-settings"></i>
+            <li ng-class="currentState == 'admin.gamecontrol' ? 'active':''">
+               <a href="#/admin/gamecontrol">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
                   Game Control</a>
             </li>
             <li>
@@ -101,8 +101,8 @@
                   <i class="icon-settings"></i>
                   Statistics</a>
             </li>
-            <li>
-               <a href="javascrip:;">
+            <li ng-class="currentState == 'admin.transaction' ? 'active':''">
+               <a href="#/admin/transaction">
                   <i class="icon-settings"></i>
                   Transaction History</a>
             </li>

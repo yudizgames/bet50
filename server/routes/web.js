@@ -8,6 +8,7 @@ var passport = require("passport");
 var randomstring = require("randomstring");
 var JWTStrategy = require('../../config/passport-auth'); //passport-jwt Authorization Strategy
 var async = require("async");
+var os = require("os");
 
 passport.use(JWTStrategy);
 module.exports = function (app,cli,mail) {
@@ -503,7 +504,9 @@ module.exports = function (app,cli,mail) {
 
     // User Module End
 
-    //Agent Module
+    //Admin panel
+
+    //Agent Management Module
 
     app.post('/list_agent',function(req,res){
         cli.blue(JSON.stringify(req.body));
@@ -745,8 +748,10 @@ module.exports = function (app,cli,mail) {
         }
     })
 
-    // End Agent Module
-    //Cashier Module
+    // End Agent Management Module
+
+    //Cashier Management Module
+
     app.post('/list_cashier',function(req,res){
         cli.blue(JSON.stringify(req.body));
         var obj = {
@@ -903,7 +908,375 @@ module.exports = function (app,cli,mail) {
         }
     });
 
-    //Cashier Module End
+    //Cashier Management Module End
+
+    app.post('/list_cashier_agent',passport.authenticate('jwt',{session:false}),function(req,res){
+        cli.blue(JSON.stringify(req.body));
+        console.log(req.user);
+        var obj = {
+            'vUserName': req.body.search.value, //Search Apply for default search text box
+            'vEmail': req.body.search.value, //Search Apply for default search text box
+            'iAgentId' : req.user[0].iUserId
+        };
+        queries.ls_cashier_count_agent_panel(obj, function(err, record) {
+            var iTotalRecords = parseInt(record[0].iTotalRecords);
+            var iDisplayLength = parseInt(req.body.length);
+            iDisplayLength = iDisplayLength < 0 ? iTotalRecords : iDisplayLength;
+            var iDisplayStart = parseInt(req.body.start);
+            var end = iDisplayStart + iDisplayLength;
+            end = end > iTotalRecords ? iTotalRecords : end;
+            var obj = {
+                'limit': end,
+                'offset': iDisplayStart,
+                'vFullName': req.body.search.value,
+                'vEmail': req.body.search.value,
+                'sort':getSorting(req.body),
+                'iAgentId' : req.user[0].iUserId
+            };
+            queries.ls_cashier_select_agent_panel(obj, function(err, users) {
+                if (err) return err;
+                var i = 0;
+                var records = {};
+                records['draw'] = req.body.draw;
+                records['recordsTotal'] = iTotalRecords;
+                records['recordsFiltered'] = iTotalRecords;
+                records['data'] = [];
+                for (var key in users) {
+                    // var status = '<input bs-switch ng-model="'+users[i].eStatus+'" value="'+users[i].eStatus+'" class="switch-small" type="checkbox" ng-true-value="&apos;y&apos;" ng-false-value="&apos;n&apos;" ng-change="onUserStatusChange(&apos;'+users[i].eStatus+'&apos;,'+users[i].iUserId+')">';
+                    var operation = '<button ng-click="userOperation('+users[i].iUserId+',&quot;view&quot;)" title="View"  class="btn btn-success btn-xs">View</button>';
+                    operation+= '<button ng-click="userOperation('+users[i].iUserId+',&quot;edit&quot;)" title="Edit"  class="btn btn-warning  btn-xs">Edit</button>';
+                    operation+= '<button ng-click="userOperation('+users[i].iUserId+',&quot;delete&quot;)" title="Delete"  class="btn btn-danger  btn-xs">Delete</button>';
+                    records['data'][i] = {"iUserId":users[i].iUserId,"vFullName":users[i].vFullName,"vEmail":users[i].vEmail,"eStatus":users[i].eStatus,"vOperation":operation,"vUserType":users[i].vUserType};
+                    i++;
+                }
+                res.json(records);
+            });
+        });
+    });
+
+    app.post('/add_cashier_agent',passport.authenticate('jwt',{session:false}),function (req,res) {
+        if(req.user.length > 0){
+            req.checkBody('vFullName',"Please Enter Full Name").notEmpty();
+            req.checkBody('vEmail','Please Enter Email Address').notEmpty();
+            req.checkBody('vEmail','Please Enter Proper Email').isEmail();
+            req.getValidationResult().then(function(result){
+                if(!result.isEmpty()){
+                    res.json({
+                        "status": 404,
+                        "message": "Please fill all required value",
+                        "Data":result.mapped()
+                    });
+                }else{
+                    checkUser(req.body.vEmail,function(errOne,isActive){
+                        if(errOne) throw errOne;
+                        if(isActive.length > 0) {
+                            res.json({
+                                "status":404,
+                                "message":"User already available"
+                            });
+                        }else{
+                            var vPassword = randomstring.generate(6);
+                            queries.addUser({"vUserType":"cashier","vFullName":req.body.vFullName,"vUserName":req.body.vEmail,"vEmail":req.body.vEmail,"vPassword":vPassword},function(errTwo,resTwo){
+                                if(errTwo) throw errTwo;
+                                queries.add_tbl_cashiers({iUserId:resTwo.insertId,iAgentId:req.user[0].iUserId},function(errThree,resThree){
+                                    if(errThree) throw errThree;
+                                    if(resThree.insertId > 0) {
+                                        //Send Mail
+                                        var mailOptions = {
+                                            from: '"Bet50" <info@Bet50.com>', // sender address
+                                            to: req.body.vEmail, // list of receivers
+                                            subject: 'Hello '+ req.body.vFullName, // Subject line
+                                            text: 'One time password  : ' + vPassword // plaintext body
+                                        };
+                                        mail.sendMail(mailOptions,function(err,info){
+                                            if(err){
+                                                cli.red("Mail not send");
+                                                console.log(err);
+                                            }else{
+                                                cli.yellow("Mail send");
+                                            }
+                                        });
+                                        //Send mail end
+                                        res.json({
+                                            "status":200,
+                                            "message":"User Insert Successfully."
+                                        });
+                                    }else{
+                                        res.json({
+                                            "status":400,
+                                            "message":"Something went wrong"
+                                        });
+                                    }
+                                });
+                            });
+                        }
+                    });
+                }
+            });
+
+
+        }else{
+            res.status(401).json({
+                'status':401,
+                'message':'User does not exists'
+            })
+        }
+    });
+
+    app.post('/update_cashier_agent',passport.authenticate('jwt',{session:false}),function (req,res) {
+        if(req.user.length > 0){
+            req.checkBody('vFullName',"Please Enter Full Name").notEmpty();
+            req.checkBody('iUserId',"Please Enter User Details").notEmpty();
+            req.getValidationResult().then(function(result){
+                if(!result.isEmpty()){
+                    res.json({
+                        "status": 404,
+                        "message": "Please fill all required value",
+                        "Data":result.mapped()
+                    });
+                }else{
+                    checkUser(req.body.vEmail,function(errOne,isActive){
+                        if(errOne) throw errOne;
+                        if(isActive.length > 0) {
+                            res.json({
+                                "status":404,
+                                "message":"User already available"
+                            });
+                        }else{
+                            queries.updateUserById({vFullName:req.body.vFullName,id:req.body.iUserId},function(errOne,resOne){
+                                if(errOne) throw errOne;
+                                        res.status(200).json({
+                                            'status':'200',
+                                            'message':'Record updated successfully.'
+                                        });
+                            });
+                        }
+                    });
+                }
+            });
+
+
+        }else{
+            res.status(401).json({
+                'status':401,
+                'message':'User does not exists'
+            })
+        }
+    });
+
+    //Agent Panel
+
+
+    //Credit Management
+
+    app.post('/get_credit',passport.authenticate('jwt',{session:false}),function(req,res){
+        console.log(req.connection.remoteAddress);
+        if(req.user.length > 0){
+            queries.get_credit({iUserId:req.user[0].iUserId},function(err,row){
+                if(err) throw err;
+                if(row.length > 0){
+                    res.json({
+                        "status":200,
+                        "message":"Success",
+                        "data":row
+                    })
+                }else{
+                    res.status(404).json({
+                        "status":404,
+                        "message":"Not Found",
+                    })
+                }
+            });
+        }else{
+            res.status(401).json({
+                'status':401,
+                'message':'User does not exists'
+            })
+        }
+    });
+
+    app.post('/add_credits_admin',passport.authenticate('jwt',{session:false}),function(req,res){
+       if(req.user.length > 0){
+           req.checkBody('iUserId',"User must be required").notEmpty();
+           req.checkBody('dCredit',"Please Enter valid credit").notEmpty();
+           req.checkBody('eCreditType',"Please enter Credit Type").notEmpty();
+           req.checkBody('vComment','Please Enter valid comment').notEmpty();
+           req.checkBody('vDebitTo','Please enter DebitTo').notEmpty();
+           req.getValidationResult().then(function(result) {
+               if (!result.isEmpty()) {
+                   res.json({
+                       "status": 404,
+                       "message": "Please fill all required value",
+                       "Data":result.mapped()
+                   });
+               }else{
+                   if(req.body.vDebitTo == 'agent'){
+                        queries.add_tbl_credit_history({
+                            iSRUserOneId:req.user[0].iUserId,
+                            iSRUserTwoId:req.body.iUserId,
+                            dCredit:req.body.dCredit,
+                            eCreditType:req.body.eCreditType,
+                            vComment:req.body.vComment
+                        },function(err,rows){
+                            if(err) throw err;
+                            if(rows.insertId > 0 ){
+                                var eCreditType = "";
+                                req.body.eCreditType == "credit" ? eCreditType = "debit" : eCreditType = "credit";
+                                queries.add_tbl_credit_history({
+                                    iSRUserOneId:req.body.iUserId,
+                                    iSRUserTwoId:req.user[0].iUserId,
+                                    dCredit:req.body.dCredit,
+                                    eCreditType:eCreditType,
+                                    vComment:req.body.vComment
+                                },function(errOne,rowsOne){
+                                    if(errOne) throw errOne;
+                                    if(rowsOne.insertId > 0 ){
+                                        queries.add_credit({
+                                            dCredit:req.body.dCredit,
+                                            iUserId:req.body.iUserId
+                                        },function(errTwo,rowsTwo){
+                                            if(errTwo) throw errTwo;
+                                            if(rowsTwo.affectedRows > 0) {
+                                                res.json({
+                                                    status:200,
+                                                    message:'Credit Transfer successfully.'
+                                                });
+                                            }else{
+                                                res.json({
+                                                    status:403,
+                                                    message:'Problem for add credit'
+                                                });
+                                            }
+                                        });
+                                    }else{
+                                        res.json({
+                                            status:403,
+                                            message:'Something went wrong'
+                                        });
+                                    }
+                                });
+                            }else{
+                                res.json({
+                                    status:403,
+                                    message:'Something went wrong'
+                                })
+                            }
+                        });
+                   }else{
+                       /**
+                        * This stuff under discussion.
+                        */
+                   }
+                }
+           });
+        }else{
+           res.status(401).json({
+               'status':401,
+               'message':'User does not exists'
+           })
+       }
+    });
+
+
+    app.post("/add_credit_agent",passport.authenticate('jwt',{session:false}),function(req,res){
+        if(req.user.length > 0){
+            req.checkBody('iUserId',"User must be required").notEmpty();
+            req.checkBody('dCredit',"Please Enter valid credit").notEmpty();
+            req.checkBody('eCreditType',"Please enter Credit Type").notEmpty();
+            req.checkBody('vComment','Please Enter valid comment').notEmpty();
+            req.getValidationResult().then(function(result) {
+                if (!result.isEmpty()){
+                    res.json({
+                        "status": 404,
+                        "message": "Please fill all required value",
+                        "Data":result.mapped()
+                    });
+                }else{
+                    queries.get_credit({iUserId:req.user[0].iUserId},function(errOne,resOne){
+                        if(resOne[0].dCredit < req.body.dCredit){
+                            res.json({
+                                "status":405,
+                                "message":"Insufficient Balance for that transaction"
+                            });
+                        }else{
+                            queries.add_tbl_credit_history({
+                                iSRUserOneId:req.user[0].iUserId,
+                                iSRUserTwoId:req.body.iUserId,
+                                dCredit:req.body.dCredit,
+                                eCreditType:req.body.eCreditType,
+                                vComment:req.body.vComment
+                            },function(errTwo,resTwo){
+                                if(errTwo) throw errTwo;
+                                if(resTwo.insertId > 0){
+                                    var eCreditType = "";
+                                    req.body.eCreditType == "credit" ? eCreditType = "debit" : eCreditType = "credit";
+                                    queries.add_tbl_credit_history({
+                                        iSRUserOneId:req.body.iUserId,
+                                        iSRUserTwoId:req.user[0].iUserId,
+                                        dCredit:req.body.dCredit,
+                                        eCreditType:eCreditType,
+                                        vComment:req.body.vComment
+                                    },function(errThree,resThree){
+                                        if(errThree) throw errThree;
+                                        if(resThree.insertId > 0 ){
+                                            queries.debit_credit({dCredit:req.body.dCredit,iUserId:req.user[0].iUserId},function(errThree,resThree){
+                                                if(errThree) throw errThree;
+                                                if(resThree.affectedRows > 0){
+                                                    queries.add_credit({dCredit:req.body.dCredit,iUserId:req.body.iUserId},function(errFour,resFour){
+                                                        if(errFour) throw errFour;
+                                                        if(resFour.affectedRows > 0){
+                                                            res.json({
+                                                                status:200,
+                                                                message:'Credit Transfer successfully.'
+                                                            })
+                                                        }else{
+                                                            res.json({
+                                                                status:404,
+                                                                message:'something went wrong L4'
+                                                            });
+                                                        }
+                                                    });
+                                                }else{
+                                                    res.json({
+                                                        status:404,
+                                                        message:'something went wrong L3'
+                                                    });
+                                                }
+                                            });
+                                        }else{
+                                            res.json({
+                                                status:404,
+                                                message:'something went wrong L2'
+                                            });
+                                        }
+                                    });
+                                }else{
+                                    res.json({
+                                        status:404,
+                                        message:'something went wrong L1'
+                                    });
+                                }
+                            });
+                        }
+                    });
+                }
+            });
+        }else{
+            res.status(401).json({
+                'status':401,
+                'message':'User does not exists'
+            })
+        }
+    });
+    //Credit Management
+
+
+
+
+
+
+
+
 }
 
 /**

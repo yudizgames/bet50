@@ -58,9 +58,7 @@ app.use(expressValidator());
 require("./server/routes/game")(app,cli,mail);
 app.use(express.static(path.join(__dirname, 'client')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
-
 //Web API
-
 require("./server/routes/web")(app,cli,mail);
 // require("./server/modules/socket_test")(app,app.io);
 // require("./server/modules/socket_test_v1")(app,app.io);

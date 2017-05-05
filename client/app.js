@@ -55,15 +55,11 @@ pemdas.config(function($stateProvider,$urlRouterProvider,$locationProvider,$ocLa
     });
 });
 pemdas.run(function($state,$rootScope,$http,$localForage){
-
     $rootScope.$state = $state; // state to be accessed from view
     $rootScope.$on('$stateChangeStart',function(event,toState,fromState,fromParams,$localtion){
-
         var currentState = toState.name;
-        if(currentState){
-
-
-            $localForage.getItem('UserInfo').then(function(data){
+            if(currentState){
+                $localForage.getItem('UserInfo').then(function(data){
                 if(data != null){
 
                     if(data.vUserType == 'super_admin' && data.status == 200){

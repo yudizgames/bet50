@@ -163,7 +163,6 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$ocLazyL
                 }]
             }
     })
-
     .state('admin.cashierdetails',{
             url:'/cashierdetails/:id',
             templateUrl:'templates/admin/details_cashier.html',
@@ -207,6 +206,76 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$ocLazyL
             }]
         }
     })
+    .state('admin.credit',{
+            url:'/credit',
+            templateUrl:'templates/admin/list_credit.html',
+            data :{ pageTitle:'Cashier list',bodyClass:'page-header-fixed page-sidebar-closed-hide-logo page-sidebar-closed-hide-logo' },
+            controller:'CreditListCtrl',
+            resolve:{
+                depends:['$ocLazyLoad',function($ocLazyLoad){
+
+                    return $ocLazyLoad.load({
+                        name:'main',
+                        insertBefore:'#ng_load_plugins_before',
+                        files:[
+                            'assets/admin/js/admin/controllers/list_creditctrl.js',
+                        ]
+                    });
+                }]
+            }
+    })
+    .state('admin.gamecontrol',{
+            url:'/gamecontrol',
+            templateUrl:'templates/admin/gamecontrol.html',
+            data :{ pageTitle:'Cashier list',bodyClass:'page-header-fixed page-sidebar-closed-hide-logo page-sidebar-closed-hide-logo' },
+            controller:'GameControlCtrl',
+            resolve:{
+                depends:['$ocLazyLoad',function($ocLazyLoad){
+                    return $ocLazyLoad.load({
+                        name:'main',
+                        insertBefore:'#ng_load_plugins_before',
+                        files:[
+                            'assets/admin/js/admin/controllers/gamecontrol.js',
+                        ]
+                    });
+                }]
+            }
+    })
+    .state('admin.statics',{
+            url:'/statics',
+            templateUrl:'templates/admin/statics.html',
+            data :{ pageTitle:'Cashier list',bodyClass:'page-header-fixed page-sidebar-closed-hide-logo page-sidebar-closed-hide-logo' },
+            controller:'StatisticsCtrl',
+            resolve:{
+                depends:['$ocLazyLoad',function($ocLazyLoad){
+                    return $ocLazyLoad.load({
+                        name:'main',
+                        insertBefore:'#ng_load_plugins_before',
+                        files:[
+                            'assets/admin/js/admin/controllers/statisticsctrl.js',
+                        ]
+                    });
+                }]
+            }
+    })
+    .state('admin.transaction',{
+            url:'/transaction',
+            templateUrl:'templates/admin/list_transaction.html',
+            data :{ pageTitle:'Cashier list',bodyClass:'page-header-fixed page-sidebar-closed-hide-logo page-sidebar-closed-hide-logo' },
+            controller:'TransactionCtrl',
+            resolve:{
+                depends:['$ocLazyLoad',function($ocLazyLoad){
+                    return $ocLazyLoad.load({
+                        name:'main',
+                        insertBefore:'#ng_load_plugins_before',
+                        files:[
+                            'assets/admin/js/admin/controllers/list_transactionctrl.js',
+                        ]
+                    });
+                }]
+            }
+    })
+
 });
 app.run(function(){
 
