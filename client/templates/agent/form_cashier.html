@@ -4,7 +4,7 @@
         <a href="javascript:;" ui-sref="client.dashboard">Dashboard</a><i class="fa fa-circle"></i>
     </li>
     <li class="active">
-        <a href="javascript:;" ui-sref="client.cashier">Cashier List</a><i class="fa fa-circle"></i>
+        <a href="javascript:;" ui-sref="client].cashier">Cashier List</a><i class="fa fa-circle"></i>
     </li>
     <li class="active">
         Cashier {{form_action}}
@@ -46,6 +46,18 @@
                                     <div ng-messages="form_cpass.nPassword.$error && form_cpass.nPassword.$dirty" ng-show="form_user.vEmail.$error && form_user.vEmail.$dirty" role="alert" class="text-danger">
                                         <div ng-message="required" ng-show="form_user.vEmail.$dirty && form_user.vEmail.$error.required">Email is required.</div>
                                         <div ng-show="form_user.vEmail.$dirty && form_user.vEmail.$error.email">Enter valid email address.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3" for="vEmail">Mobile Number <span class="text-danger">*</span></label>
+                                <div class="col-md-4">
+                                    <input type="number" value="" class="form-control" name="iMobile" id="iMobile"  required ng-model="user.iMobile" ng-minlength="8" ng-maxlength="15">
+                                    <div ng-messages="form_cpass.nPassword.$error && form_cpass.nPassword.$dirty" ng-show="form_user.iMobile.$error && form_user.iMobile.$dirty" role="alert" class="text-danger">
+                                        <div ng-message="required" ng-show="form_user.iMobile.$dirty && form_user.iMobile.$error.required">Mobile number is required.</div>
+                                        <div ng-show="form_user.iMobile.$dirty && form_user.iMobile.$error.minlength">Enter valid mobile.</div>
+                                        <div ng-show="form_user.iMobile.$dirty && form_user.iMobile.$error.maxlength">Enter valid mobile.</div>
                                     </div>
                                 </div>
                             </div>

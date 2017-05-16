@@ -18,6 +18,7 @@ angular.module('main').controller('AgentFormCtrl',function ($scope,$rootScope,$s
                 'vOperation':'edit',
                 'id':$scope.user.iUserId+'',
                 'vFullName':$scope.user.vFullName,
+                'iMobile':$scope.user.iMobile
             };
             $http({
                 method:'post',
@@ -39,7 +40,8 @@ angular.module('main').controller('AgentFormCtrl',function ($scope,$rootScope,$s
         }else{
             submitData = {
                 'vFullName':$scope.user.vFullName,
-                'vEmail':$scope.user.vEmail
+                'vEmail':$scope.user.vEmail,
+                'iMobile':$scope.user.iMobile
             };
             $http({
                 method:'post',

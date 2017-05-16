@@ -8,10 +8,11 @@ module.exports = {
         'user':'root',
         'debug':true,
         'password':'root',
+        // 'password':'Bet50',
         // 'password':'!$ecUrepa55W0rd!',
         'port':'8889',
         'database':'yudiz_bet50',
-        // 'database':'pemdas2',
+        // 'database':'bet50',
     },
     'users_table':'tbl_users'
 }

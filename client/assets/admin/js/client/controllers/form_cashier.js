@@ -31,21 +31,22 @@ angular.module('client').controller('AgentCashierFormCtrl',function ($scope,$roo
 
 
     $scope.submitUser = function(){
+        console.log("Submit user call");
         let postData = {};
         var URL = "";
         if($scope.user.iUserId != null || $scope.user.iUserId != undefined){
             postData = {
                 iUserId: $scope.user.iUserId,
                 vFullName:$scope.user.vFullName,
-
+                iMobile:$scope.user.iMobile
             }
             URL = "/update_cashier_agent";
-
         }else{
             postData = {
                     iUserId:0,
                     vFullName:$scope.user.vFullName,
-                    vEmail:$scope.user.vEmail
+                    vEmail:$scope.user.vEmail,
+                    iMobile:$scope.user.iMobile
             }
             URL = "/add_cashier_agent";
         }

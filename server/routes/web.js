@@ -341,7 +341,7 @@ module.exports = function (app,cli,mail) {
                                     /**
                                      * Add Agent
                                      */
-                                    queries.addUser({"vUserType":'agent',"vFullName":req.body.vFullName,"vUserName":req.body.vEmail,"vEmail":req.body.vEmail,"vPassword":vPassword},function(err,rows){
+                                    queries.addUser({"vUserType":'agent',"vFullName":req.body.vFullName,"vUserName":req.body.vEmail,"vEmail":req.body.vEmail,"vPassword":vPassword,"iMobile":req.body.iMobile},function(err,rows){
                                         if(err) throw err;
                                         if(rows.affectedRows > 0){
                                             //Send Mail
@@ -432,14 +432,14 @@ module.exports = function (app,cli,mail) {
                                 })
                             }
                         }
-
-
                     });
                 }else if(req.body.vOperation == 'edit'){
+                    console.log("Edit call");
+                    console.log(req.body.iMobile.toString());
                     if(!validator.isEmpty(req.body.vFullName)){
                         cli.green("Edit call");
                         cli.red(req.body.id);
-                        queries.updateUserById({'id':req.body.id,'vFullName':req.body.vFullName},function(err,rows){
+                        queries.updateUserById({'id':req.body.id,'vFullName':req.body.vFullName,'iMobile':req.body.iMobile},function(err,rows){
                             if(err) throw err;
                             res.status(200).json({
                                 'message':'User update successfully'
@@ -816,7 +816,7 @@ module.exports = function (app,cli,mail) {
                             });
                         }else{
                             var vPassword = randomstring.generate(6);
-                            queries.addUser({"vUserType":"cashier","vFullName":req.body.vFullName,"vUserName":req.body.vEmail,"vEmail":req.body.vEmail,"vPassword":vPassword},function(errTwo,resTwo){
+                            queries.addUser({"vUserType":"cashier","vFullName":req.body.vFullName,"vUserName":req.body.vEmail,"vEmail":req.body.vEmail,"vPassword":vPassword,iMobile:req.body.iMobile},function(errTwo,resTwo){
                                 if(errTwo) throw errTwo;
                                 queries.add_tbl_cashiers({iUserId:resTwo.insertId,iAgentId:req.body.iAgentId},function(errThree,resThree){
                                     if(errThree) throw errThree;
@@ -864,6 +864,7 @@ module.exports = function (app,cli,mail) {
     });
 
     app.post('/update_cashier',passport.authenticate('jwt',{session:false}),function (req,res) {
+        cli.red(JSON.stringify(req.body));
         if(req.user.length > 0){
             req.checkBody('vFullName',"Please Enter Full Name").notEmpty();
             req.checkBody('iUserId',"Please Enter User Details").notEmpty();
@@ -884,7 +885,7 @@ module.exports = function (app,cli,mail) {
                                 "message":"User already available"
                             });
                         }else{
-                            queries.updateUserById({vFullName:req.body.vFullName,id:req.body.iUserId},function(errOne,resOne){
+                            queries.updateUserById({vFullName:req.body.vFullName,id:req.body.iUserId,iMobile:req.body.iMobile},function(errOne,resOne){
                                 if(errOne) throw errOne;
                                 queries.update_tbl_cashiers({iAgentId:req.body.iAgentId,iUserId:req.body.iUserId},function(errTwo,resTwo){
                                     if(errTwo) throw errTwo;
@@ -958,6 +959,7 @@ module.exports = function (app,cli,mail) {
         if(req.user.length > 0){
             req.checkBody('vFullName',"Please Enter Full Name").notEmpty();
             req.checkBody('vEmail','Please Enter Email Address').notEmpty();
+            req.checkBody('iMobile','Please Enter Mobile Number').notEmpty();
             req.checkBody('vEmail','Please Enter Proper Email').isEmail();
             req.getValidationResult().then(function(result){
                 if(!result.isEmpty()){
@@ -976,7 +978,7 @@ module.exports = function (app,cli,mail) {
                             });
                         }else{
                             var vPassword = randomstring.generate(6);
-                            queries.addUser({"vUserType":"cashier","vFullName":req.body.vFullName,"vUserName":req.body.vEmail,"vEmail":req.body.vEmail,"vPassword":vPassword},function(errTwo,resTwo){
+                            queries.addUser({"vUserType":"cashier","vFullName":req.body.vFullName,"vUserName":req.body.vEmail,"vEmail":req.body.vEmail,"vPassword":vPassword,"iMobile":req.body.iMobile},function(errTwo,resTwo){
                                 if(errTwo) throw errTwo;
                                 queries.add_tbl_cashiers({iUserId:resTwo.insertId,iAgentId:req.user[0].iUserId},function(errThree,resThree){
                                     if(errThree) throw errThree;
@@ -1024,8 +1026,10 @@ module.exports = function (app,cli,mail) {
     });
 
     app.post('/update_cashier_agent',passport.authenticate('jwt',{session:false}),function (req,res) {
+        cli.red(JSON.stringify(req.body));
         if(req.user.length > 0){
             req.checkBody('vFullName',"Please Enter Full Name").notEmpty();
+            req.checkBody('iMobile',"Please Valid Mobile").notEmpty();
             req.checkBody('iUserId',"Please Enter User Details").notEmpty();
             req.getValidationResult().then(function(result){
                 if(!result.isEmpty()){
@@ -1043,7 +1047,7 @@ module.exports = function (app,cli,mail) {
                                 "message":"User already available"
                             });
                         }else{
-                            queries.updateUserById({vFullName:req.body.vFullName,id:req.body.iUserId},function(errOne,resOne){
+                            queries.updateUserById({vFullName:req.body.vFullName,id:req.body.iUserId,iMobile:req.body.iMobile},function(errOne,resOne){
                                 if(errOne) throw errOne;
                                         res.status(200).json({
                                             'status':'200',
@@ -1065,7 +1069,6 @@ module.exports = function (app,cli,mail) {
     });
 
     //Agent Panel
-
 
     //Credit Management
 
@@ -1095,7 +1098,7 @@ module.exports = function (app,cli,mail) {
         }
     });
 
-    app.post('/add_credits_admin',passport.authenticate('jwt',{session:false}),function(req,res){
+    app.post('/add_credits_admin_to_agent',passport.authenticate('jwt',{session:false}),function(req,res){
        if(req.user.length > 0){
            req.checkBody('iUserId',"User must be required").notEmpty();
            req.checkBody('dCredit',"Please Enter valid credit").notEmpty();
@@ -1110,7 +1113,6 @@ module.exports = function (app,cli,mail) {
                        "Data":result.mapped()
                    });
                }else{
-                   if(req.body.vDebitTo == 'agent'){
                         queries.add_tbl_credit_history({
                             iSRUserOneId:req.user[0].iUserId,
                             iSRUserTwoId:req.body.iUserId,
@@ -1162,12 +1164,7 @@ module.exports = function (app,cli,mail) {
                                 })
                             }
                         });
-                   }else{
-                       /**
-                        * This stuff under discussion.
-                        */
-                   }
-                }
+                    }
            });
         }else{
            res.status(401).json({
@@ -1177,6 +1174,138 @@ module.exports = function (app,cli,mail) {
        }
     });
 
+    app.post("/add_credit_admin_to_cashier",passport.authenticate('jwt',{session:false}),function(req,res){
+        if(req.user.length > 0){
+            req.checkBody("iAgentId","Agent name must be required");
+            req.checkBody("iChashierId","Cashier name must be required");
+            req.checkBody("dCredit","Agent name must be required");
+            req.checkBody("vComment","Comment must be required");
+            req.getValidationResult().then(function(result){
+                if (!result.isEmpty()) {
+                    res.json({
+                        "status": 404,
+                        "message": "Please fill all required value",
+                        "Data":result.mapped()
+                    });
+                }else{
+                    //Admin to Agent Credit Transfer Preocess.
+                    queries.add_tbl_credit_history({
+                        iSRUserOneId:req.user[0].iUserId,
+                        iSRUserTwoId:req.body.iAgentId,
+                        dCredit:req.body.dCredit,
+                        eCreditType:"debit",
+                        vComment:req.body.vComment
+                    },function(errOne,resOne){
+                        if(errOne) throw errOne;
+                        if(resOne.insertId > 0){
+                            queries.add_tbl_credit_history({
+                                iSRUserOneId:req.body.iAgentId,
+                                iSRUserTwoId:req.user[0].iUserId,
+                                dCredit:req.body.dCredit,
+                                eCreditType:"credit",
+                                vComment:req.body.vComment
+                            },function(errTwo,resTwo){
+                                if(errTwo) throw errTwo;
+                                if(resTwo.insertId > 0){
+                                    queries.add_credit({
+                                        dCredit:req.body.dCredit,
+                                        iUserId:req.body.iAgentId
+                                    },function(errThree,resThree){
+                                        if(errThree) throw errThree;
+                                        if(resThree.affectedRows > 0){
+                                            //Agent to Cashier transfer process.
+                                            queries.add_tbl_credit_history({  //Add Agent to Cashier
+                                                iSRUserOneId:req.body.iChashierId,
+                                                iSRUserTwoId:req.body.iAgentId,
+                                                dCredit:req.body.dCredit,
+                                                eCreditType:"credit",
+                                                vComment:req.body.vComment
+                                            },function(errFour,resFour){
+                                                if(errFour) throw errFour;
+                                                if(resFour.insertId > 0){
+                                                    queries.add_tbl_credit_history({
+                                                        iSRUserOneId:req.body.iAgentId,
+                                                        iSRUserTwoId:req.body.iChashierId,
+                                                        dCredit:req.body.dCredit,
+                                                        eCreditType:"debit",
+                                                        vComment:req.body.vComment
+                                                    },function(errFive,resFive){
+                                                        if(errFive) throw errFive;
+                                                        if(resFive.insertId > 0){
+                                                            queries.debit_credit({
+                                                                dCredit:req.body.dCredit,
+                                                                iUserId:req.body.iAgentId
+                                                            },function(errSeven,resSeven){
+                                                                if(errSeven) throw errSeven;
+                                                                if(resSeven.affectedRows > 0){
+                                                                    queries.add_credit({
+                                                                        dCredit:req.body.dCredit,
+                                                                        iUserId:req.body.iChashierId
+                                                                    },function(errEight,resEight){
+                                                                        if(errEight) throw errEight;
+                                                                        if(resEight.affectedRows > 0){
+                                                                            res.status(200).json({
+                                                                                status:200,
+                                                                                message:"Success"
+                                                                            });
+                                                                        }else{
+                                                                            res.json({
+                                                                                status:403,
+                                                                                message:'Something went wrong on level 8'
+                                                                            });
+                                                                        }
+                                                                    });
+                                                                }else{
+                                                                    res.json({
+                                                                        status:403,
+                                                                        message:'Something went wrong on level 7'
+                                                                    });
+                                                                }
+                                                            });
+                                                        }else{
+                                                            res.json({
+                                                                status:403,
+                                                                message:'Something went wrong on level 5'
+                                                            })
+                                                        }
+                                                    })
+                                                }else{
+                                                    res.json({
+                                                        status:403,
+                                                        message:'Something went wrong on level 4'
+                                                    })
+                                                }
+                                            });
+                                        }else{
+                                            res.json({
+                                                status:403,
+                                                message:'Something went wrong on level 3'
+                                            })
+                                        }
+                                    });
+                                }else{
+                                    res.json({
+                                        status:403,
+                                        message:'Something went wrong on level 2'
+                                    })
+                                }
+                            });
+                        }else{
+                            res.json({
+                                status:403,
+                                message:'Something went wrong on level 1'
+                            })
+                        }
+                    });
+                }
+            });
+        }else{
+            res.status(401).json({
+                'status':401,
+                'message':'User does not exists'
+            })
+        }
+    });
 
     app.post("/add_credit_agent",passport.authenticate('jwt',{session:false}),function(req,res){
         if(req.user.length > 0){
@@ -1268,6 +1397,7 @@ module.exports = function (app,cli,mail) {
             })
         }
     });
+
     //Credit Management
 
 

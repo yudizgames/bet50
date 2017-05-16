@@ -5,39 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27362cfb-720d-43ba-832c-1edc0aec1adb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/gamecontrol.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/list_creditctrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/list_transactionctrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/statisticsctrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/assets/admin/js/client/controllers/details_cashierctrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/assets/admin/js/client/controllers/form_cashier.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/assets/admin/js/client/controllers/list_cashierctrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/assets/admin/js/client/controllers/list_commissionctrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/assets/admin/js/client/controllers/list_creditctrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/assets/admin/js/client/controllers/list_transactionctrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/templates/admin/gamecontrol.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/templates/admin/list_credit.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/templates/admin/list_transaction.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/templates/admin/statics.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/templates/agent/details_cashier.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/templates/agent/form_cashier.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/templates/agent/list_cashier.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/templates/agent/list_commission.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/templates/agent/list_credit.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/templates/agent/list_transaction.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/admin/upload/logo.png" afterPath="$PROJECT_DIR$/client/assets/admin/upload/logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/admin/upload/logo_1.png" afterPath="$PROJECT_DIR$/client/assets/admin/upload/logo_1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/admin/upload/logo_2.png" afterPath="$PROJECT_DIR$/client/assets/admin/upload/logo_2.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app.js" afterPath="$PROJECT_DIR$/client/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/admin/js/admin/admin.js" afterPath="$PROJECT_DIR$/client/assets/admin/js/admin/admin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/admin/js/client/client.js" afterPath="$PROJECT_DIR$/client/assets/admin/js/client/client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/index.html" afterPath="$PROJECT_DIR$/client/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/admin/admin.html" afterPath="$PROJECT_DIR$/client/templates/admin/admin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/details_agent.js" afterPath="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/details_agent.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/details_cashierctrl.js" afterPath="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/details_cashierctrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/form_agent.js" afterPath="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/form_agent.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/form_cashier.js" afterPath="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/form_cashier.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/gamecontrol.js" afterPath="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/gamecontrol.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/list_agentctrl.js" afterPath="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/list_agentctrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/list_cashierctrl.js" afterPath="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/list_cashierctrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/list_creditctrl.js" afterPath="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/list_creditctrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/list_transactionctrl.js" afterPath="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/list_transactionctrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/statisticsctrl.js" afterPath="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/statisticsctrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/admin/js/client/controllers/details_cashierctrl.js" afterPath="$PROJECT_DIR$/client/assets/admin/js/client/controllers/details_cashierctrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/admin/js/client/controllers/form_cashier.js" afterPath="$PROJECT_DIR$/client/assets/admin/js/client/controllers/form_cashier.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/admin/js/client/controllers/list_cashierctrl.js" afterPath="$PROJECT_DIR$/client/assets/admin/js/client/controllers/list_cashierctrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/admin/js/client/controllers/list_commissionctrl.js" afterPath="$PROJECT_DIR$/client/assets/admin/js/client/controllers/list_commissionctrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/admin/js/client/controllers/list_creditctrl.js" afterPath="$PROJECT_DIR$/client/assets/admin/js/client/controllers/list_creditctrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/admin/js/client/controllers/list_transactionctrl.js" afterPath="$PROJECT_DIR$/client/assets/admin/js/client/controllers/list_transactionctrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/admin/dashboard.html" afterPath="$PROJECT_DIR$/client/templates/admin/dashboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/agent/agent.html" afterPath="$PROJECT_DIR$/client/templates/agent/agent.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/agent/dashboard.html" afterPath="$PROJECT_DIR$/client/templates/agent/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/admin/details_agent.html" afterPath="$PROJECT_DIR$/client/templates/admin/details_agent.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/admin/details_cashier.html" afterPath="$PROJECT_DIR$/client/templates/admin/details_cashier.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/admin/form_agent.html" afterPath="$PROJECT_DIR$/client/templates/admin/form_agent.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/admin/form_cashier.html" afterPath="$PROJECT_DIR$/client/templates/admin/form_cashier.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/admin/gamecontrol.html" afterPath="$PROJECT_DIR$/client/templates/admin/gamecontrol.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/admin/list_agent.html" afterPath="$PROJECT_DIR$/client/templates/admin/list_agent.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/admin/list_cashier.html" afterPath="$PROJECT_DIR$/client/templates/admin/list_cashier.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/admin/list_credit.html" afterPath="$PROJECT_DIR$/client/templates/admin/list_credit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/admin/list_transaction.html" afterPath="$PROJECT_DIR$/client/templates/admin/list_transaction.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/admin/statics.html" afterPath="$PROJECT_DIR$/client/templates/admin/statics.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/agent/details_cashier.html" afterPath="$PROJECT_DIR$/client/templates/agent/details_cashier.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/agent/form_cashier.html" afterPath="$PROJECT_DIR$/client/templates/agent/form_cashier.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/agent/list_cashier.html" afterPath="$PROJECT_DIR$/client/templates/agent/list_cashier.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/agent/list_commission.html" afterPath="$PROJECT_DIR$/client/templates/agent/list_commission.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/agent/list_credit.html" afterPath="$PROJECT_DIR$/client/templates/agent/list_credit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/agent/list_transaction.html" afterPath="$PROJECT_DIR$/client/templates/agent/list_transaction.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.js" afterPath="$PROJECT_DIR$/config/database.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/modules/queries.js" afterPath="$PROJECT_DIR$/server/modules/queries.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/routes/game.js" afterPath="$PROJECT_DIR$/server/routes/game.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/routes/web.js" afterPath="$PROJECT_DIR$/server/routes/web.js" />
     </list>
     <ignored path="pemdas21.iws" />
@@ -61,22 +67,52 @@
     <favorites_list name="pemdas21" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="admin.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/assets/admin/js/admin/admin.js">
+    <leaf>
+      <file leaf-file-name="client.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/assets/admin/js/client/client.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="247" column="38" selection-start-line="247" selection-start-column="24" selection-end-line="247" selection-end-column="38" />
+            <state relative-caret-position="399">
+              <caret line="112" column="53" selection-start-line="112" selection-start-column="41" selection-end-line="112" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/routes/web.js">
+      <file leaf-file-name="form_cashier.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/templates/agent/form_cashier.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="737">
+              <caret line="59" column="34" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form_cashier.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/assets/admin/js/admin/controllers/form_cashier.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="401">
+              <caret line="55" column="43" selection-start-line="55" selection-start-column="43" selection-end-line="55" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form_cashier.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/assets/admin/js/client/controllers/form_cashier.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="386">
-              <caret line="1215" column="65" selection-start-line="1215" selection-start-column="65" selection-end-line="1215" selection-end-column="65" />
+              <caret line="42" column="40" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/routes/web.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="539">
+              <caret line="1049" column="50" selection-start-line="1049" selection-start-column="36" selection-end-line="1049" selection-end-column="50" />
               <folding>
                 <element signature="e#570#705#0" expanded="false" />
                 <element signature="e#748#2310#0" expanded="false" />
@@ -86,105 +122,30 @@
                 <element signature="e#6825#7385#0" expanded="false" />
                 <element signature="e#7480#9655#0" expanded="false" />
                 <element signature="e#9766#16091#0" expanded="false" />
-                <element signature="e#16232#19795#0" expanded="false" />
-                <element signature="e#19891#24592#0" expanded="false" />
-                <element signature="e#24714#27203#0" expanded="false" />
-                <element signature="e#27297#30757#0" expanded="false" />
-                <element signature="e#30855#35204#0" expanded="false" />
-                <element signature="e#35298#35724#0" expanded="false" />
-                <element signature="e#35588#35718#0" expanded="false" />
-                <element signature="e#35842#38335#0" expanded="false" />
-                <element signature="e#38431#42028#0" expanded="false" />
-                <element signature="e#42127#44039#0" expanded="false" />
-                <element signature="e#44177#46821#0" expanded="false" />
-                <element signature="e#46923#50450#0" expanded="false" />
-                <element signature="e#50555#52176#0" expanded="false" />
+                <element signature="e#16232#19822#0" expanded="false" />
+                <element signature="e#24874#27363#0" expanded="false" />
+                <element signature="e#27457#30917#0" expanded="false" />
+                <element signature="e#31015#35364#0" expanded="false" />
+                <element signature="e#35458#35884#0" expanded="false" />
+                <element signature="e#35748#35878#0" expanded="false" />
+                <element signature="e#36002#38495#0" expanded="false" />
+                <element signature="e#42312#44292#0" expanded="false" />
+                <element signature="e#44430#47074#0" expanded="false" />
+                <element signature="e#47176#50808#0" expanded="false" />
+                <element signature="e#52810#53586#0" expanded="false" />
+                <element signature="e#53695#57569#0" expanded="false" />
+                <element signature="e#57679#66067#0" expanded="false" />
+                <element signature="e#66166#71363#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="game.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/routes/game.js">
+      <file leaf-file-name="connection.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/modules/connection.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-              <folding>
-                <element signature="e#806#2383#0" expanded="false" />
-                <element signature="e#2478#2926#0" expanded="false" />
-                <element signature="e#3022#3314#0" expanded="false" />
-                <element signature="e#3408#3881#0" expanded="false" />
-                <element signature="e#3982#5594#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="loginctrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/assets/admin/js/loginctrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="queries.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/modules/queries.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="365" column="108" selection-start-line="365" selection-start-column="101" selection-end-line="365" selection-end-column="108" />
-              <folding>
-                <element signature="e#2385#4042#0" expanded="false" />
-                <element signature="e#4083#6716#0" expanded="false" />
-                <element signature="e#6908#7004#0" expanded="false" />
-                <element signature="e#7049#7230#0" expanded="false" />
-                <element signature="e#7269#7474#0" expanded="false" />
-                <element signature="e#7508#7843#0" expanded="false" />
-                <element signature="e#7884#8027#0" expanded="false" />
-                <element signature="e#8069#8688#0" expanded="false" />
-                <element signature="e#8729#9287#0" expanded="false" />
-                <element signature="e#9329#10150#0" expanded="false" />
-                <element signature="e#10193#10753#0" expanded="false" />
-                <element signature="e#10797#11620#0" expanded="false" />
-                <element signature="e#11675#12421#0" expanded="false" />
-                <element signature="e#12477#13523#0" expanded="false" />
-                <element signature="e#13570#14106#0" expanded="false" />
-                <element signature="e#14140#14234#0" expanded="false" />
-                <element signature="e#14276#14598#0" expanded="false" />
-                <element signature="e#14631#14731#0" expanded="false" />
-                <element signature="e#14772#14889#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list_transaction.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/templates/admin/list_transaction.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="56" selection-start-line="0" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gamecontrol.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/templates/admin/gamecontrol.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="62" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="statics.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/templates/admin/statics.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -208,16 +169,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/templates/admin/list_agent.html" />
         <option value="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/details_cashierctrl.js" />
         <option value="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/list_agentctrl.js" />
         <option value="$PROJECT_DIR$/client/templates/admin/details_cashier.html" />
         <option value="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/list_cashierctrl.js" />
         <option value="$PROJECT_DIR$/client/templates/admin/list_cashier.html" />
-        <option value="$PROJECT_DIR$/client/templates/admin/form_agent.html" />
-        <option value="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/form_agent.js" />
-        <option value="$PROJECT_DIR$/client/templates/admin/form_cashier.html" />
-        <option value="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/form_cashier.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/client/assets/admin/js/cashier/cashier.js" />
@@ -225,9 +181,7 @@
         <option value="$PROJECT_DIR$/client/templates/agent/details_cashier.html" />
         <option value="$PROJECT_DIR$/client/templates/agent/dashboard.html" />
         <option value="$PROJECT_DIR$/client/assets/admin/js/client/controllers/list_cashierctrl.js" />
-        <option value="$PROJECT_DIR$/client/assets/admin/js/client/controllers/form_cashier.js" />
         <option value="$PROJECT_DIR$/client/templates/agent/list_cashier.html" />
-        <option value="$PROJECT_DIR$/client/templates/agent/form_cashier.html" />
         <option value="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/list_creaditctrl.js" />
         <option value="$PROJECT_DIR$/client/templates/admin/list_creadit.html" />
         <option value="$PROJECT_DIR$/client/app.js" />
@@ -241,7 +195,6 @@
         <option value="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/transactionctrl.js" />
         <option value="$PROJECT_DIR$/client/templates/admin/admin.html" />
         <option value="$PROJECT_DIR$/client/templates/admin/list_transaction.html" />
-        <option value="$PROJECT_DIR$/client/templates/admin/dashboard.html" />
         <option value="$PROJECT_DIR$/client/assets/admin/js/client/controllers/list_creditctrl.js" />
         <option value="$PROJECT_DIR$/client/assets/admin/js/client/controllers/list_transactionctrl.js" />
         <option value="$PROJECT_DIR$/client/templates/agent/list_commissionctrl.js" />
@@ -257,8 +210,16 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/server/routes/game.js" />
         <option value="$PROJECT_DIR$/client/assets/admin/js/loginctrl.js" />
-        <option value="$PROJECT_DIR$/server/modules/queries.js" />
+        <option value="$PROJECT_DIR$/config/database.js" />
+        <option value="$PROJECT_DIR$/client/templates/admin/dashboard.html" />
+        <option value="$PROJECT_DIR$/client/templates/admin/form_cashier.html" />
+        <option value="$PROJECT_DIR$/client/templates/admin/form_agent.html" />
+        <option value="$PROJECT_DIR$/client/assets/admin/js/client/controllers/form_cashier.js" />
+        <option value="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/form_cashier.js" />
+        <option value="$PROJECT_DIR$/client/assets/admin/js/admin/controllers/form_agent.js" />
         <option value="$PROJECT_DIR$/server/routes/web.js" />
+        <option value="$PROJECT_DIR$/client/templates/agent/form_cashier.html" />
+        <option value="$PROJECT_DIR$/server/modules/queries.js" />
       </list>
     </option>
   </component>
@@ -297,7 +258,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -316,32 +276,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bet50" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bet50" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../git/pemdas21" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
-    <property name="SearchEverywhereHistoryKey" value="login&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/js/loginctrl.js&#10;quer&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/server/modules/queries.js&#10;admin&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/templates/admin/admin.html&#10;web&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/server/routes/web.js&#10;clien&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/js/client/client.js&#10;list_cas&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/js/client/controllers/list_cashierctrl.js&#10;form_ca&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/js/client/controllers/form_cashier.js&#10;admin.js&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/js/admin/admin.js&#10;dash&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/templates/agent/dashboard.html&#10;app&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/app.js&#10;form_c&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/templates/admin/form_cashier.html&#10;form_agent&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/js/admin/controllers/form_agent.js&#10;admin.j&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/js/admin/admin.js&#10;list_cash&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/templates/admin/list_cashier.html&#10;det&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/templates/admin/details_cashier.html&#10;list_ca&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/templates/admin/list_cashier.html&#10;list_age&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/js/admin/controllers/list_agentctrl.js&#10;app.js&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/app.js&#10;list&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/js/admin/controllers/list_agentctrl.js&#10;list_ag&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/js/admin/controllers/list_agentctrl.js&#10;form_age&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/js/admin/controllers/form_agent.js&#10;list_a&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/js/admin/controllers/list_agentctrl.js&#10;list_agent&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/templates/admin/list_agent.html&#10;we&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/server/routes/web.js&#10;das&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/templates/admin/dashboard.html&#10;cli&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/js/client/client.js&#10;layout&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/layout/scripts/layout.js&#10;q&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/server/modules/queries.js&#10;que&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/server/modules/queries.js&#10;game&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/server/routes/game.js&#10;fpass&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/client/fpassctrl.js&#10;fpassctrl&#9;null&#9;null&#10;web.&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/server/routes/web.js&#10;web.js&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/server/routes/web.js&#10;web.j&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/server/routes/web.js&#10;inde&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/client/index.html&#10;list_q&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/client/templates/admin/list_question.html&#10;form&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/client/client/js/controllers/form_examctrl.js&#10;form_exa&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/client/templates/client/form_exam.html&#10;list_qu&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/client/admin/js/controllers/list_questionctrl.js&#10;ame&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/server/routes/game.js&#10;admin.ht&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/client/templates/admin/admin.html&#10;details_reuslt&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/client/templates/admin/details_reuslt.html&#10;details_players&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/client/templates/admin/details_players.html&#10;view_customer&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/client/templates/admin/view_customer.html&#10;view_customerctrl&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/client/admin/js/controllers/view_customerctrl.js&#10;details_exam&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/client/templates/client/details_exam.html&#10;details_examctrl&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/client/client/js/controllers/details_examctrl.js&#10;details_playersctrl&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/client/client/js/controllers/details_playersctrl.js&#10;form_e&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/client/templates/client/form_exam.html" />
+    <property name="SearchEverywhereHistoryKey" value="web&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/server/routes/web.js&#10;form_cashier&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/templates/admin/form_cashier.html&#10;client&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/js/client/client.js&#10;form_agent&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/js/admin/controllers/form_agent.js&#10;admin.js&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/js/admin/admin.js&#10;dash&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/templates/admin/dashboard.html&#10;login&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/js/loginctrl.js&#10;quer&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/server/modules/queries.js&#10;admin&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/templates/admin/admin.html&#10;clien&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/js/client/client.js&#10;list_cas&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/js/client/controllers/list_cashierctrl.js&#10;form_ca&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/js/client/controllers/form_cashier.js&#10;app&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/app.js&#10;form_c&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/templates/admin/form_cashier.html&#10;admin.j&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/js/admin/admin.js&#10;list_cash&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/templates/admin/list_cashier.html&#10;det&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/templates/admin/details_cashier.html&#10;list_ca&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/templates/admin/list_cashier.html&#10;list_age&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/js/admin/controllers/list_agentctrl.js&#10;app.js&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/app.js&#10;list&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/js/admin/controllers/list_agentctrl.js&#10;list_ag&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/js/admin/controllers/list_agentctrl.js&#10;form_age&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/js/admin/controllers/form_agent.js&#10;list_a&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/js/admin/controllers/list_agentctrl.js&#10;list_agent&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/templates/admin/list_agent.html&#10;we&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/server/routes/web.js&#10;das&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/templates/admin/dashboard.html&#10;cli&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/js/client/client.js&#10;layout&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/client/assets/admin/layout/scripts/layout.js&#10;q&#9;FILE&#9;file:///Users/YudizAshish/node/bet50/bet50/server/modules/queries.js&#10;que&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/server/modules/queries.js&#10;game&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/server/routes/game.js&#10;fpass&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/client/fpassctrl.js&#10;fpassctrl&#9;null&#9;null&#10;web.&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/server/routes/web.js&#10;web.js&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/server/routes/web.js&#10;web.j&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/server/routes/web.js&#10;inde&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/client/index.html&#10;list_q&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/client/templates/admin/list_question.html&#10;form&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/client/client/js/controllers/form_examctrl.js&#10;form_exa&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/client/templates/client/form_exam.html&#10;list_qu&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/client/admin/js/controllers/list_questionctrl.js&#10;ame&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/server/routes/game.js&#10;admin.ht&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/client/templates/admin/admin.html&#10;details_reuslt&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/client/templates/admin/details_reuslt.html&#10;details_players&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/client/templates/admin/details_players.html&#10;view_customer&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/client/templates/admin/view_customer.html&#10;view_customerctrl&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/client/admin/js/controllers/view_customerctrl.js&#10;details_exam&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/client/templates/client/details_exam.html&#10;details_examctrl&#9;FILE&#9;file:///Users/YudizAshish/node/git/pemdas21/client/client/js/controllers/details_examctrl.js" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -483,34 +430,41 @@
       <workItem from="1493701105494" duration="12163000" />
       <workItem from="1493794411706" duration="2131000" />
       <workItem from="1493874087420" duration="16094000" />
-      <workItem from="1493960861681" duration="14631000" />
+      <workItem from="1493960861681" duration="15557000" />
+      <workItem from="1494220012997" duration="6071000" />
+      <workItem from="1494305959174" duration="152000" />
+      <workItem from="1494392626662" duration="269000" />
+      <workItem from="1494479477956" duration="155000" />
+      <workItem from="1494565737359" duration="574000" />
+      <workItem from="1494824873704" duration="5834000" />
+      <workItem from="1494911149770" duration="2023000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="621633000" />
+    <option name="totallyTimeSpent" value="637637000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2113951" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.171459" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30617678" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45953143" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="100" y="123" width="1720" height="815" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32723576" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -522,10 +476,10 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3200213" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19808307" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27848774" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11927582" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277592" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32723576" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -553,48 +507,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/assets/admin/js/admin/controllers/changepassctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/assets/admin/js/admin/controllers/details_agent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/assets/admin/js/admin/controllers/details_cashierctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="53" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/admin/details_cashier.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-687">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/assets/admin/js/admin/controllers/form_agent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="65" column="8" selection-start-line="65" selection-start-column="8" selection-end-line="82" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/assets/admin/js/admin/controllers/form_cashier.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="77" column="55" selection-start-line="77" selection-start-column="55" selection-end-line="77" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -630,13 +542,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/agent/form_cashier.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/templates/agent/list_cashier.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -650,9 +555,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="35" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="35" />
-          <folding>
-            <marker date="1493892158000" expanded="true" signature="1814:1821" ph="×" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -699,20 +601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/admin/form_cashier.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="99" selection-start-line="6" selection-start-column="99" selection-end-line="6" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/admin/form_agent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/assets/admin/js/admin/controllers/gamecontrol.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -724,7 +612,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
           <caret line="99" column="37" selection-start-line="99" selection-start-column="37" selection-end-line="99" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -749,25 +636,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/admin/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/assets/admin/js/admin/controllers/list_transactionctrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/assets/admin/js/client/controllers/form_cashier.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -810,7 +682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="85" column="44" selection-start-line="85" selection-start-column="44" selection-end-line="85" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -821,42 +692,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/assets/admin/js/client/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="717">
-          <caret line="163" column="29" selection-start-line="163" selection-start-column="19" selection-end-line="163" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/admin/list_transaction.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="56" selection-start-line="0" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/admin/gamecontrol.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="62" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/admin/statics.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -864,7 +703,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -872,9 +710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#46#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -886,11 +721,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/assets/admin/js/admin/admin.js">
+    <entry file="file://$PROJECT_DIR$/client/templates/admin/list_transaction.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="247" column="38" selection-start-line="247" selection-start-column="24" selection-end-line="247" selection-end-column="38" />
-          <folding />
+        <state relative-caret-position="255">
+          <caret line="17" column="56" selection-start-line="0" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/templates/admin/gamecontrol.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="62" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/templates/admin/statics.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/templates/admin/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="752">
+          <caret line="169" column="60" selection-start-line="169" selection-start-column="60" selection-end-line="169" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -908,38 +770,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/modules/queries.js">
+    <entry file="file://$PROJECT_DIR$/config/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="365" column="108" selection-start-line="365" selection-start-column="101" selection-end-line="365" selection-end-column="108" />
-          <folding>
-            <element signature="e#2385#4042#0" expanded="false" />
-            <element signature="e#4083#6716#0" expanded="false" />
-            <element signature="e#6908#7004#0" expanded="false" />
-            <element signature="e#7049#7230#0" expanded="false" />
-            <element signature="e#7269#7474#0" expanded="false" />
-            <element signature="e#7508#7843#0" expanded="false" />
-            <element signature="e#7884#8027#0" expanded="false" />
-            <element signature="e#8069#8688#0" expanded="false" />
-            <element signature="e#8729#9287#0" expanded="false" />
-            <element signature="e#9329#10150#0" expanded="false" />
-            <element signature="e#10193#10753#0" expanded="false" />
-            <element signature="e#10797#11620#0" expanded="false" />
-            <element signature="e#11675#12421#0" expanded="false" />
-            <element signature="e#12477#13523#0" expanded="false" />
-            <element signature="e#13570#14106#0" expanded="false" />
-            <element signature="e#14140#14234#0" expanded="false" />
-            <element signature="e#14276#14598#0" expanded="false" />
-            <element signature="e#14631#14731#0" expanded="false" />
-            <element signature="e#14772#14889#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/www">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/templates/admin/form_agent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="692">
+          <caret line="62" column="34" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/assets/admin/js/admin/controllers/form_agent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="24" column="35" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/assets/admin/js/admin/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="186" column="27" selection-start-line="186" selection-start-column="27" selection-end-line="186" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/templates/admin/form_cashier.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="52" column="28" selection-start-line="52" selection-start-column="28" selection-end-line="62" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/assets/admin/js/admin/controllers/form_cashier.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="55" column="43" selection-start-line="55" selection-start-column="43" selection-end-line="55" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/templates/agent/form_cashier.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="737">
+          <caret line="59" column="34" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/assets/admin/js/client/client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="112" column="53" selection-start-line="112" selection-start-column="41" selection-end-line="112" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/assets/admin/js/client/controllers/form_cashier.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="42" column="40" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/routes/web.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="1215" column="65" selection-start-line="1215" selection-start-column="65" selection-end-line="1215" selection-end-column="65" />
+        <state relative-caret-position="539">
+          <caret line="1049" column="50" selection-start-line="1049" selection-start-column="36" selection-end-line="1049" selection-end-column="50" />
           <folding>
             <element signature="e#570#705#0" expanded="false" />
             <element signature="e#748#2310#0" expanded="false" />
@@ -949,20 +859,55 @@
             <element signature="e#6825#7385#0" expanded="false" />
             <element signature="e#7480#9655#0" expanded="false" />
             <element signature="e#9766#16091#0" expanded="false" />
-            <element signature="e#16232#19795#0" expanded="false" />
-            <element signature="e#19891#24592#0" expanded="false" />
-            <element signature="e#24714#27203#0" expanded="false" />
-            <element signature="e#27297#30757#0" expanded="false" />
-            <element signature="e#30855#35204#0" expanded="false" />
-            <element signature="e#35298#35724#0" expanded="false" />
-            <element signature="e#35588#35718#0" expanded="false" />
-            <element signature="e#35842#38335#0" expanded="false" />
-            <element signature="e#38431#42028#0" expanded="false" />
-            <element signature="e#42127#44039#0" expanded="false" />
-            <element signature="e#44177#46821#0" expanded="false" />
-            <element signature="e#46923#50450#0" expanded="false" />
-            <element signature="e#50555#52176#0" expanded="false" />
+            <element signature="e#16232#19822#0" expanded="false" />
+            <element signature="e#24874#27363#0" expanded="false" />
+            <element signature="e#27457#30917#0" expanded="false" />
+            <element signature="e#31015#35364#0" expanded="false" />
+            <element signature="e#35458#35884#0" expanded="false" />
+            <element signature="e#35748#35878#0" expanded="false" />
+            <element signature="e#36002#38495#0" expanded="false" />
+            <element signature="e#42312#44292#0" expanded="false" />
+            <element signature="e#44430#47074#0" expanded="false" />
+            <element signature="e#47176#50808#0" expanded="false" />
+            <element signature="e#52810#53586#0" expanded="false" />
+            <element signature="e#53695#57569#0" expanded="false" />
+            <element signature="e#57679#66067#0" expanded="false" />
+            <element signature="e#66166#71363#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/modules/queries.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="181" column="8" selection-start-line="181" selection-start-column="8" selection-end-line="181" selection-end-column="8" />
+          <folding>
+            <element signature="e#2385#4042#0" expanded="false" />
+            <element signature="e#4083#6716#0" expanded="false" />
+            <element signature="e#6908#7004#0" expanded="false" />
+            <element signature="e#7049#7230#0" expanded="false" />
+            <element signature="e#7903#8046#0" expanded="false" />
+            <element signature="e#8088#8707#0" expanded="false" />
+            <element signature="e#8748#9306#0" expanded="false" />
+            <element signature="e#9348#10169#0" expanded="false" />
+            <element signature="e#10212#10772#0" expanded="false" />
+            <element signature="e#10816#11639#0" expanded="false" />
+            <element signature="e#11694#12440#0" expanded="false" />
+            <element signature="e#12496#13542#0" expanded="false" />
+            <element signature="e#13589#14125#0" expanded="false" />
+            <element signature="e#14159#14253#0" expanded="false" />
+            <element signature="e#14295#14617#0" expanded="false" />
+            <element signature="e#14650#14750#0" expanded="false" />
+            <element signature="e#14791#14908#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/modules/connection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

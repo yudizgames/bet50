@@ -52,7 +52,8 @@ angular.module('main').controller('CashierFormCtrl',function ($scope,$rootScope,
             postData = {
                 iUserId: $scope.user.iUserId,
                 vFullName:$scope.user.vFullName,
-                iAgentId:$scope.user.iAgentId
+                iAgentId:$scope.user.iAgentId,
+                iMobile:$scope.user.iMobile
             }
             URL = "/update_cashier";
 
@@ -61,7 +62,8 @@ angular.module('main').controller('CashierFormCtrl',function ($scope,$rootScope,
                     iUserId:0,
                     vFullName:$scope.user.vFullName,
                     iAgentId:$scope.user.iAgentId,
-                    vEmail:$scope.user.vEmail
+                    vEmail:$scope.user.vEmail,
+                    iMobile:$scope.user.iMobile
             }
             URL = "/add_cashier";
         }

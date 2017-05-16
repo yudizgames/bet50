@@ -179,11 +179,11 @@ var Users = {
     },
 
     updateUserById:function(body,cb){
-        db.query("UPDATE tbl_users SET vFullName = ? , vUserName = ?, dLastActivity = ? WHERE iUserId = ? ",[body.vFullName,body.vFullName,dateFormat(new Date(),"yyyy-mm-dd HH:mm:ss"),body.id],cb);
+        db.query("UPDATE tbl_users SET vFullName = ? , dLastActivity = ?, iMobile = ? WHERE iUserId = ? ",[body.vFullName,dateFormat(new Date(),"yyyy-mm-dd HH:mm:ss"),body.iMobile,body.id],cb);
     },
 
     addUser:function (body,cb) {
-        db.query("INSERT INTO tbl_users (vUserType,vFullName,vUserName,vEmail,vPassword,eStatus,dLastActivity,dCreatedDate) VALUES (?,?,?,?,?,?,?,?)",[body.vUserType,body.vFullName,body.vUserName,body.vEmail,md5(body.vPassword),'y',dateFormat(new Date(),"yyyy-mm-dd HH:mm:ss"),dateFormat(new Date(),"yyyy-mm-dd HH:mm:ss")],cb);
+        db.query("INSERT INTO tbl_users (vUserType,vFullName,vUserName,vEmail,vPassword,eStatus,dLastActivity,dCreatedDate,iMobile) VALUES (?,?,?,?,?,?,?,?,?)",[body.vUserType,body.vFullName,body.vUserName,body.vEmail,md5(body.vPassword),'y',dateFormat(new Date(),"yyyy-mm-dd HH:mm:ss"),dateFormat(new Date(),"yyyy-mm-dd HH:mm:ss"),body.iMobile],cb);
     },
 
     updateAfterInsertQuestion(body,cb){
